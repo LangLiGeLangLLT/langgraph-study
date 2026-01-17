@@ -23,6 +23,11 @@ def b(state: State):
     return {"aggregate": ["B"]}
 
 
+def b_2(state: State):
+    print(f'Adding "B_2" to {state["aggregate"]}')
+    return {"aggregate": ["B_2"]}
+
+
 def c(state: State):
     print(f'Adding "C" to {state["aggregate"]}')
     return {"aggregate": ["C"]}
@@ -38,15 +43,17 @@ if __name__ == "__main__":
 
     builder.add_node(a)
     builder.add_node(b)
+    builder.add_node(b_2)
     builder.add_node(c)
     builder.add_node(d)
     builder.add_edge(START, "a")
     builder.add_edge("a", "b")
     builder.add_edge("a", "c")
-    builder.add_edge("b", "d")
-    builder.add_edge("c", "d")
+    builder.add_edge("b", "b_2")
+    builder.add_edge(["b_2", "c"], "d")
     builder.add_edge("d", END)
 
     graph = builder.compile()
 
-    graph.invoke({"aggregate": []}, {"configurable": {"thread_id": "foo"}})
+    result = graph.invoke({"aggregate": []}, {"configurable": {"thread_id": "foo"}})
+    print(result)

@@ -11,5 +11,5 @@ pip install -r requirements.txt
 
 pip install python-dotenv
 pip install jupyter
-pip install langgraph langchain-openai
+pip install langgraph langchain-openai langchain_community
 ```

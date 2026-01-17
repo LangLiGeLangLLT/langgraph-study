@@ -1,9 +1,14 @@
-from dotenv import load_dotenv
-from typing import Literal
+"""
+基于 LangGraph 实现 ReAct 设计模式
+"""
+
 from langchain_openai import ChatOpenAI
 from langchain_core.tools import tool
-from langgraph.graph import END, START, StateGraph, MessagesState
+
+from langgraph.graph import END, StateGraph, MessagesState
 from langgraph.prebuilt import ToolNode
+
+from dotenv import load_dotenv
 
 load_dotenv()
 

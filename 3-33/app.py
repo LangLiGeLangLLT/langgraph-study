@@ -102,6 +102,5 @@ if __name__ == "__main__":
     for chunk in agent.stream(
         {"messages": [("human", "Who are you and where is live?")]},
         {"configurable": {"user_id": "1"}},
-        user_id="1",
     ):
         print(chunk)

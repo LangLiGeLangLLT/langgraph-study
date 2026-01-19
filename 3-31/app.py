@@ -31,7 +31,7 @@ def should_continue(state: MessagesState):
     messages = state["messages"]
     last_message = messages[-1]
     if last_message.tool_calls:
-        return "tool"
+        return "tools"
     return END
 
 

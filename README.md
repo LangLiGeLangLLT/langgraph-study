@@ -13,3 +13,11 @@ pip install python-dotenv
 pip install jupyter
 pip install langgraph langchain-openai langchain_community langgraph-prebuilt
 ```
+
+## LLM
+
+```python
+from dotenv import load_dotenv
+
+load_dotenv()
+```

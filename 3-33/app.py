@@ -100,7 +100,7 @@ if __name__ == "__main__":
     agent = graph.compile()
 
     for chunk in agent.stream(
-        {"messages": [("human", "Who are you and where is live?")]},
+        {"messages": [("human", "Who am i and where do i live?")]},
         {"configurable": {"user_id": "1"}},
     ):
         print(chunk)

@@ -31,4 +31,5 @@ load_dotenv()
 
 ```python
 ChatOpenAI(model="Qwen/Qwen2.5-7B-Instruct")
+OpenAIEmbeddings(model="BAAI/bge-m3")
 ```

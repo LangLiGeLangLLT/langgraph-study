@@ -17,6 +17,8 @@ pip install langgraph-prebuilt
 pip install langgraph-checkpoint-sqlite
 pip install psycopg psycopg-pool langgraph-checkpoint-postgres
 pip install pymongo langgraph-checkpoint-mongodb
+pip install trustcall
+pip install langmem
 ```
 
 ## ENV

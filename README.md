@@ -19,6 +19,7 @@ pip install psycopg psycopg-pool langgraph-checkpoint-postgres
 pip install pymongo langgraph-checkpoint-mongodb
 pip install trustcall
 pip install langmem
+pip install langgraph-supervisor
 ```
 
 ## ENV
@@ -32,6 +33,7 @@ load_dotenv()
 ## LLM
 
 ```python
-ChatOpenAI(model="Qwen/Qwen2.5-7B-Instruct")
+ChatOpenAI(model="Qwen/Qwen2.5-7B-Instruct", temperature=0)
+ChatOpenAI(model="Qwen/Qwen3-8B", temperature=0)
 OpenAIEmbeddings(model="BAAI/bge-m3")
 ```

@@ -20,6 +20,7 @@ pip install pymongo langgraph-checkpoint-mongodb
 pip install trustcall
 pip install langmem
 pip install langgraph-supervisor
+pip install langgraph-swarm
 ```
 
 ## ENV
@@ -34,12 +35,17 @@ load_dotenv()
 
 ```python
 ChatOpenAI(model="Qwen/Qwen2.5-7B-Instruct", temperature=0)
-
 ChatOpenAI(model="Qwen/Qwen3-8B", temperature=0)
-
 OpenAIEmbeddings(model="BAAI/bge-m3")
+```
 
-ChatOpenAI(
+```python
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+model = ChatOpenAI(
     model="qwen3-max-2026-01-23",
     api_key=os.getenv("DASHSCOPE_API_KEY"),
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",

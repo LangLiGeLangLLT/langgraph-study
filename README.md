@@ -52,3 +52,17 @@ model = ChatOpenAI(
     temperature=0,
 )
 ```
+
+```python
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+llm = ChatOpenAI(
+    model="qwen3-max-2026-01-23",
+    api_key=os.getenv("DASHSCOPE_API_KEY"),
+    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+    temperature=0,
+)
+```
